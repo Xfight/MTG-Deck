@@ -78,20 +78,6 @@
                 //NSString *name, *colour, *type, *cost, *exp;
                 NSString *exp;
                 card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
-                /*r.location = cur;
-                r.length = totalSize - cur;
-                r = [myText rangeOfString:@"\">" options:0 range:r];
-                
-                r2.location = r.location + r.length;
-                r2 = [myText rangeOfString:@"</A>" options:0 range:r2];
-                
-                r3.location = r.location + r.length;
-                r3.length = r2.location - r3.location;*/
-                
-                /*r.location = cur;
-                r.length = totalSize - cur;
-                r = [myText rangeOfString:@"\">" options:0 range:r];
-                cur = r.location + r.length;*/
                 
                 card.name = [self findInString:myText withStart:@"\">" andEnd:@"</A>" startFrom:&cur];
                 //NSLog(@"name : %@", name);

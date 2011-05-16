@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class CardExpansion;
+@class Expansion;
 
 @interface Card : NSManagedObject {
 @private

@@ -7,7 +7,7 @@
 //
 
 #import "Card.h"
-#import "CardExpansion.h"
+#import "Expansion.h"
 
 
 @implementation Card
@@ -17,7 +17,7 @@
 @dynamic cost;
 @dynamic expansions;
 
-- (void)addExpansionsObject:(CardExpansion *)value {    
+- (void)addExpansionsObject:(Expansion *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
     [self willChangeValueForKey:@"expansions" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
     [[self primitiveValueForKey:@"expansions"] addObject:value];
@@ -25,7 +25,7 @@
     [changedObjects release];
 }
 
-- (void)removeExpansionsObject:(CardExpansion *)value {
+- (void)removeExpansionsObject:(Expansion *)value {
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
     [self willChangeValueForKey:@"expansions" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
     [[self primitiveValueForKey:@"expansions"] removeObject:value];

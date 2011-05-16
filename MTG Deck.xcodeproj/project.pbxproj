@@ -21,9 +21,8 @@
 		8153DE2913814A28005AECBD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2813814A28005AECBD /* CoreDataManager.m */; };
 		8153DE2D13814A38005AECBD /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */; };
 		8153DE3013814A4D005AECBD /* ViewGameSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2F13814A4D005AECBD /* ViewGameSingle.m */; };
-		8153DE3C138159A0005AECBD /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE3B138159A0005AECBD /* Card.m */; };
-		8153DE3F138159B4005AECBD /* CardExpansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE3E138159B4005AECBD /* CardExpansion.m */; };
-		8153DE42138159C9005AECBD /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE41138159C9005AECBD /* Expansion.m */; };
+		8153DE4513815A3A005AECBD /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE4413815A3A005AECBD /* Card.m */; };
+		8153DE4813815A44005AECBD /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE4713815A44005AECBD /* Expansion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +47,10 @@
 		8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		8153DE2E13814A4D005AECBD /* ViewGameSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGameSingle.h; sourceTree = "<group>"; };
 		8153DE2F13814A4D005AECBD /* ViewGameSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGameSingle.m; sourceTree = "<group>"; };
-		8153DE3A138159A0005AECBD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		8153DE3B138159A0005AECBD /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		8153DE3D138159B4005AECBD /* CardExpansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpansion.h; sourceTree = "<group>"; };
-		8153DE3E138159B4005AECBD /* CardExpansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpansion.m; sourceTree = "<group>"; };
-		8153DE40138159C8005AECBD /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
-		8153DE41138159C9005AECBD /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
+		8153DE4313815A39005AECBD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		8153DE4413815A3A005AECBD /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		8153DE4613815A44005AECBD /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
+		8153DE4713815A44005AECBD /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +127,10 @@
 		81036BB81381420500B9913A /* CoreData Object */ = {
 			isa = PBXGroup;
 			children = (
-				8153DE3A138159A0005AECBD /* Card.h */,
-				8153DE3B138159A0005AECBD /* Card.m */,
-				8153DE3D138159B4005AECBD /* CardExpansion.h */,
-				8153DE3E138159B4005AECBD /* CardExpansion.m */,
-				8153DE40138159C8005AECBD /* Expansion.h */,
-				8153DE41138159C9005AECBD /* Expansion.m */,
+				8153DE4313815A39005AECBD /* Card.h */,
+				8153DE4413815A3A005AECBD /* Card.m */,
+				8153DE4613815A44005AECBD /* Expansion.h */,
+				8153DE4713815A44005AECBD /* Expansion.m */,
 				8153DE2B13814A38005AECBD /* CoreDataTableViewController.h */,
 				8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */,
 				8153DE2713814A28005AECBD /* CoreDataManager.h */,
@@ -211,9 +206,8 @@
 				8153DE2913814A28005AECBD /* CoreDataManager.m in Sources */,
 				8153DE2D13814A38005AECBD /* CoreDataTableViewController.m in Sources */,
 				8153DE3013814A4D005AECBD /* ViewGameSingle.m in Sources */,
-				8153DE3C138159A0005AECBD /* Card.m in Sources */,
-				8153DE3F138159B4005AECBD /* CardExpansion.m in Sources */,
-				8153DE42138159C9005AECBD /* Expansion.m in Sources */,
+				8153DE4513815A3A005AECBD /* Card.m in Sources */,
+				8153DE4813815A44005AECBD /* Expansion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
