@@ -20,4 +20,6 @@
 @property (nonatomic, retain) NSString * cost;
 @property (nonatomic, retain) NSSet* expansions;
 
+- (void)addExpansionsObject:(Expansion *)value;
+
 @end

@@ -70,7 +70,8 @@
     self.fetchedResultsController = frc;
     [frc release];
     
-    self.titleKey = @"timestamp";
+    self.titleKey = @"name";
+    self.searchKey = @"name";
     
     [super viewDidLoad];
     
@@ -126,6 +127,20 @@
     //NSLog(@"%@", [managedObject description]);
 	
 	return cell;
+}
+
+- (void)managedObjectSelected:(NSManagedObject *)managedObject
+{
+    Card *card = (Card *)managedObject;
+    NSMutableString *message = [NSMutableString stringWithFormat:@"%@\n", card.name];
+    for (Expansion *exp in card.expansions) {
+        [message appendFormat:@"%@\n", exp.expid];
+    }
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Card" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
+    [alert release];
 }
 
 /*- (void)managedObjectSelected:(NSManagedObject *)managedObject

@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSString * expid;
 @property (nonatomic, retain) NSSet* cards;
 
+- (void)addCardsObject:(Card *)value;
+
 @end

@@ -13,7 +13,7 @@
 @synthesize fetchedResultsController;
 @synthesize titleKey, subtitleKey, searchKey;
 
-/*- (void)createSearchBar
+- (void)createSearchBar
 {
 	if (self.searchKey.length) {
 		if (self.tableView && !self.tableView.tableHeaderView) {
@@ -35,7 +35,7 @@
 	[searchKey release];
 	searchKey = [aKey copy];
 	[self createSearchBar];
-}*/
+}
 
 - (NSString *)titleKey
 {
@@ -74,7 +74,8 @@
 	} else if ((tableView == self.searchDisplayController.searchResultsTableView) && self.searchKey && ![currentSearchText isEqual:self.searchDisplayController.searchBar.text]) {
 		[currentSearchText release];
 		currentSearchText = [self.searchDisplayController.searchBar.text copy];
-		NSString *searchPredicateFormat = [NSString stringWithFormat:@"%@ contains[c] %@", self.searchKey, @"%@"];
+		//NSString *searchPredicateFormat = [NSString stringWithFormat:@"%@ contains[c] %@", self.searchKey, @"%@"];
+        NSString *searchPredicateFormat = [NSString stringWithFormat:@"%@ beginswith[c] %@", self.searchKey, @"%@"];
 		NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:searchPredicateFormat, self.searchDisplayController.searchBar.text];
 		[NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
 		self.fetchedResultsController.fetchRequest.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:searchPredicate, normalPredicate , nil]];
@@ -196,7 +197,7 @@
 
 - (void)viewDidLoad
 {
-	//[self createSearchBar];
+	[self createSearchBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -231,6 +232,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 	[self managedObjectSelected:[[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath]];
 }
 

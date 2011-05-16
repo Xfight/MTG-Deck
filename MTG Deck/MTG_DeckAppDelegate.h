@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Card.h"
 #import "Expansion.h"
+#import "ViewGameSingle.h"
 
 @interface MTG_DeckAppDelegate : NSObject <UIApplicationDelegate> {
 

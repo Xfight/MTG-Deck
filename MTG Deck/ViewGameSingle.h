@@ -10,6 +10,7 @@
 #import "CoreDataManager.h"
 #import "CoreDataTableViewController.h"
 #import "Card.h"
+#import "Expansion.h"
 
 @interface ViewGameSingle : CoreDataTableViewController {
     NSDateFormatter *dateFormat;

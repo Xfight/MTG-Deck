@@ -47,10 +47,13 @@
 
 - (void)loadDatabase
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"database" ofType:@"html"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"rule-cards-english" ofType:@"html"];
     if (filePath) {
         //NSString *myText = [NSString stringWithContentsOfFile:filePath encoding:NSISOLatin1StringEncoding error:NULL];
-        NSString *myText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+        NSError *error = nil;
+        NSString *myText = [NSString stringWithContentsOfFile:filePath encoding:NSISOLatin1StringEncoding error:&error];
+        if ( error ) 
+            NSLog(@"error : %@", error);
         if (myText) {
             //textView.text= myText;
             //NSLog(@"%@", myText);
@@ -113,19 +116,60 @@
                     }
                 }
                 
-                
-                
-                //NSLog(@"Filtered array : %@", filteredArray);
-                //cur = totalSize;
+                for (NSString *exp in filteredArray) {
+                    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+                    request.entity = [NSEntityDescription entityForName:@"Expansion" inManagedObjectContext:context];
+                    request.predicate = [NSPredicate predicateWithFormat:@"expid = %@", exp];
+                    
+                    NSError *error = nil;
+                    expansion = [[context executeFetchRequest:request error:&error] lastObject];
+                    
+                    if ( !error && !expansion )
+                    {
+                        expansion = [NSEntityDescription insertNewObjectForEntityForName:@"Expansion" inManagedObjectContext:context];
+                        expansion.expid = exp;
+                        [expansion addCardsObject:card];
+                    }
+                    
+                    [card addExpansionsObject:expansion];
+                }
                 
                 r.location = cur;
                 r.length = totalSize - cur;
                 
                 r = [myText rangeOfString:@"<B><A NAME=\"" options:0 range:r];
                 cur = r.location + r.length;
-                //NSLog(@"\n");
             }
-        }
+            
+            [self saveContext];
+        } // end insert
+    } // end if check file
+} // end function
+
+- (void)moveSqlDatabase
+{
+    // For error information
+    NSError *error = nil;
+    
+    // Create file manager
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    // Point to Document directory
+    NSString *documentsDirectory = [NSHomeDirectory() 
+                                    stringByAppendingPathComponent:@"Documents"];
+    
+    NSString *filePath2 = [documentsDirectory 
+                           stringByAppendingPathComponent:@"MTG_Deck.sqlite"];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MTG_Deck" ofType:@"sqlite"];
+    if ( filePath )
+    {
+        if ([fileMgr moveItemAtPath:filePath toPath:filePath2 error:&error] != YES)
+            NSLog(@"Unable to move file: %@", [error localizedDescription]);
+    }
+    else
+    {
+        NSLog(@"unable to find MTG_Deck.sqlite");
     }
 }
 
@@ -133,7 +177,13 @@
 {
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
-    [self loadDatabase];
+    //[self loadDatabase];
+    [self moveSqlDatabase];
+    
+    ViewGameSingle *vgs = [[ViewGameSingle alloc] init];
+    [self.window addSubview:vgs.view];
+    //[vgs release];
+    
     return YES;
 }
 

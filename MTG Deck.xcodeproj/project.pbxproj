@@ -17,12 +17,12 @@
 		81036BAA1381333200B9913A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81036BA81381333200B9913A /* MainWindow.xib */; };
 		81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */; };
 		81036BB4138140D700B9913A /* database.html in Resources */ = {isa = PBXBuildFile; fileRef = 81036BB3138140D700B9913A /* database.html */; };
-		81036BBD138150FB00B9913A /* rule-cards-english.zip in Resources */ = {isa = PBXBuildFile; fileRef = 81036BBC138150FB00B9913A /* rule-cards-english.zip */; };
 		8153DE2913814A28005AECBD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2813814A28005AECBD /* CoreDataManager.m */; };
 		8153DE2D13814A38005AECBD /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */; };
 		8153DE3013814A4D005AECBD /* ViewGameSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2F13814A4D005AECBD /* ViewGameSingle.m */; };
 		8153DE4513815A3A005AECBD /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE4413815A3A005AECBD /* Card.m */; };
 		8153DE4813815A44005AECBD /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE4713815A44005AECBD /* Expansion.m */; };
+		8153DE5013817133005AECBD /* MTG_Deck.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8153DE4F13817133005AECBD /* MTG_Deck.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,6 @@
 		81036BA91381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTG_Deck.xcdatamodel; sourceTree = "<group>"; };
 		81036BB3138140D700B9913A /* database.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = database.html; sourceTree = "<group>"; };
-		81036BBC138150FB00B9913A /* rule-cards-english.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "rule-cards-english.zip"; sourceTree = "<group>"; };
 		8153DE2713814A28005AECBD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		8153DE2813814A28005AECBD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		8153DE2B13814A38005AECBD /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		8153DE4413815A3A005AECBD /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		8153DE4613815A44005AECBD /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
 		8153DE4713815A44005AECBD /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
+		8153DE4F13817133005AECBD /* MTG_Deck.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MTG_Deck.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +114,8 @@
 		81036B9D1381333200B9913A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				81036BBC138150FB00B9913A /* rule-cards-english.zip */,
 				81036BB3138140D700B9913A /* database.html */,
+				8153DE4F13817133005AECBD /* MTG_Deck.sqlite */,
 				81036B9E1381333200B9913A /* MTG Deck-Info.plist */,
 				81036B9F1381333200B9913A /* InfoPlist.strings */,
 				81036BA21381333200B9913A /* MTG Deck-Prefix.pch */,
@@ -189,7 +189,7 @@
 				81036BA11381333200B9913A /* InfoPlist.strings in Resources */,
 				81036BAA1381333200B9913A /* MainWindow.xib in Resources */,
 				81036BB4138140D700B9913A /* database.html in Resources */,
-				81036BBD138150FB00B9913A /* rule-cards-english.zip in Resources */,
+				8153DE5013817133005AECBD /* MTG_Deck.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
