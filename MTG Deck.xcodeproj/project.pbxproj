@@ -19,6 +19,7 @@
 		81036BB4138140D700B9913A /* database.html in Resources */ = {isa = PBXBuildFile; fileRef = 81036BB3138140D700B9913A /* database.html */; };
 		81036BB7138141FE00B9913A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BB6138141FE00B9913A /* Card.m */; };
 		81036BBB1381421700B9913A /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BBA1381421700B9913A /* Expansion.m */; };
+		81036BBD138150FB00B9913A /* rule-cards-english.zip in Resources */ = {isa = PBXBuildFile; fileRef = 81036BBC138150FB00B9913A /* rule-cards-english.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		81036BB6138141FE00B9913A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		81036BB91381421700B9913A /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
 		81036BBA1381421700B9913A /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
+		81036BBC138150FB00B9913A /* rule-cards-english.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "rule-cards-english.zip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		81036B9D1381333200B9913A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81036BBC138150FB00B9913A /* rule-cards-english.zip */,
 				81036BB3138140D700B9913A /* database.html */,
 				81036B9E1381333200B9913A /* MTG Deck-Info.plist */,
 				81036B9F1381333200B9913A /* InfoPlist.strings */,
@@ -171,6 +174,7 @@
 				81036BA11381333200B9913A /* InfoPlist.strings in Resources */,
 				81036BAA1381333200B9913A /* MainWindow.xib in Resources */,
 				81036BB4138140D700B9913A /* database.html in Resources */,
+				81036BBD138150FB00B9913A /* rule-cards-english.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
