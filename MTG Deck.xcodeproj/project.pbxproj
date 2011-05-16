@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81036B951381333200B9913A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81036B941381333200B9913A /* UIKit.framework */; };
+		81036B971381333200B9913A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81036B961381333200B9913A /* Foundation.framework */; };
+		81036B991381333200B9913A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81036B981381333200B9913A /* CoreGraphics.framework */; };
+		81036B9B1381333200B9913A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81036B9A1381333200B9913A /* CoreData.framework */; };
+		81036BA11381333200B9913A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81036B9F1381333200B9913A /* InfoPlist.strings */; };
+		81036BA41381333200B9913A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BA31381333200B9913A /* main.m */; };
+		81036BA71381333200B9913A /* MTG_DeckAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */; };
+		81036BAA1381333200B9913A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81036BA81381333200B9913A /* MainWindow.xib */; };
+		81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		81036B901381333200B9913A /* MTG Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81036B941381333200B9913A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		81036B961381333200B9913A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81036B981381333200B9913A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		81036B9A1381333200B9913A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		81036B9E1381333200B9913A /* MTG Deck-Info.plist */ = {isa = PBXFileReference; path = "MTG Deck-Info.plist"; sourceTree = "<group>"; };
+		81036BA01381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81036BA21381333200B9913A /* MTG Deck-Prefix.pch */ = {isa = PBXFileReference; path = "MTG Deck-Prefix.pch"; sourceTree = "<group>"; };
+		81036BA31381333200B9913A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */ = {isa = PBXFileReference; path = MTG_DeckAppDelegate.h; sourceTree = "<group>"; };
+		81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTG_DeckAppDelegate.m; sourceTree = "<group>"; };
+		81036BA91381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTG_Deck.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81036B8D1381333200B9913A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81036B951381333200B9913A /* UIKit.framework in Frameworks */,
+				81036B971381333200B9913A /* Foundation.framework in Frameworks */,
+				81036B991381333200B9913A /* CoreGraphics.framework in Frameworks */,
+				81036B9B1381333200B9913A /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81036B851381333100B9913A = {
+			isa = PBXGroup;
+			children = (
+				81036B9C1381333200B9913A /* MTG Deck */,
+				81036B931381333200B9913A /* Frameworks */,
+				81036B911381333200B9913A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81036B911381333200B9913A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81036B901381333200B9913A /* MTG Deck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81036B931381333200B9913A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81036B941381333200B9913A /* UIKit.framework */,
+				81036B961381333200B9913A /* Foundation.framework */,
+				81036B981381333200B9913A /* CoreGraphics.framework */,
+				81036B9A1381333200B9913A /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81036B9C1381333200B9913A /* MTG Deck */ = {
+			isa = PBXGroup;
+			children = (
+				81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */,
+				81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */,
+				81036BA81381333200B9913A /* MainWindow.xib */,
+				81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */,
+				81036B9D1381333200B9913A /* Supporting Files */,
+			);
+			path = "MTG Deck";
+			sourceTree = "<group>";
+		};
+		81036B9D1381333200B9913A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81036B9E1381333200B9913A /* MTG Deck-Info.plist */,
+				81036B9F1381333200B9913A /* InfoPlist.strings */,
+				81036BA21381333200B9913A /* MTG Deck-Prefix.pch */,
+				81036BA31381333200B9913A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81036B8F1381333200B9913A /* MTG Deck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81036BB01381333200B9913A /* Build configuration list for PBXNativeTarget "MTG Deck" */;
+			buildPhases = (
+				81036B8C1381333200B9913A /* Sources */,
+				81036B8D1381333200B9913A /* Frameworks */,
+				81036B8E1381333200B9913A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MTG Deck";
+			productName = "MTG Deck";
+			productReference = 81036B901381333200B9913A /* MTG Deck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81036B871381333100B9913A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 81036B8A1381333100B9913A /* Build configuration list for PBXProject "MTG Deck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81036B851381333100B9913A;
+			productRefGroup = 81036B911381333200B9913A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81036B8F1381333200B9913A /* MTG Deck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81036B8E1381333200B9913A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81036BA11381333200B9913A /* InfoPlist.strings in Resources */,
+				81036BAA1381333200B9913A /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81036B8C1381333200B9913A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81036BA41381333200B9913A /* main.m in Sources */,
+				81036BA71381333200B9913A /* MTG_DeckAppDelegate.m in Sources */,
+				81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81036B9F1381333200B9913A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81036BA01381333200B9913A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		81036BA81381333200B9913A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81036BA91381333200B9913A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81036BAE1381333200B9913A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81036BAF1381333200B9913A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		81036BB11381333200B9913A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTG Deck/MTG Deck-Prefix.pch";
+				INFOPLIST_FILE = "MTG Deck/MTG Deck-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		81036BB21381333200B9913A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTG Deck/MTG Deck-Prefix.pch";
+				INFOPLIST_FILE = "MTG Deck/MTG Deck-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81036B8A1381333100B9913A /* Build configuration list for PBXProject "MTG Deck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81036BAE1381333200B9913A /* Debug */,
+				81036BAF1381333200B9913A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81036BB01381333200B9913A /* Build configuration list for PBXNativeTarget "MTG Deck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81036BB11381333200B9913A /* Debug */,
+				81036BB21381333200B9913A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */,
+			);
+			currentVersion = 81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */;
+			path = MTG_Deck.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 81036B871381333100B9913A /* Project object */;
+}
