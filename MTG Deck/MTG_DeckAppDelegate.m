@@ -19,9 +19,125 @@
 
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
 
+- (NSString *)findInString:(NSString *)content withStart:(NSString *)start andEnd:(NSString *)end startFrom:(NSUInteger *) pos
+{
+    NSUInteger length = [content length];
+    NSString *s = nil;
+    NSRange r, r1;
+    r.location = *pos;
+    r.length = length - *pos;
+    r = [content rangeOfString:start options:0 range:r];
+    if ( r.location == NSNotFound )
+        return s;
+    
+    r1.location = r.location + r.length;
+    r1.length = length - r1.location;
+    r1 = [content rangeOfString:end options:0 range:r1];
+    if ( r1.location == NSNotFound )
+        return s;
+    
+    r.location = r.location + r.length;
+    r.length = r1.location - r.location;
+    
+    *pos = r.location + r.length;
+    
+    s = [content substringWithRange:r];
+    return s;
+}
+
 - (void)loadDatabase
 {
-    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"database" ofType:@"html"];
+    if (filePath) {
+        //NSString *myText = [NSString stringWithContentsOfFile:filePath encoding:NSISOLatin1StringEncoding error:NULL];
+        NSString *myText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+        if (myText) {
+            //textView.text= myText;
+            //NSLog(@"%@", myText);
+            
+            /*
+            <B><A NAME="6E055">Abduction</A></B> <I>(Rapimento)</I><UL> 
+            <TABLE BORDER="1" cellpadding="4"><TR><TD> Colore= Blu </TD><TD>Tipo= Incantesimo - Aura </TD><TD>Costo= 2LL</TD> <TD ALIGN=RIGHT>CA(NC)/6E(NC)</TD></TR> 
+            <TR><TD COLSPAN="4">Testo (6E): Incanta creatura  ; Quando il Rapimento entra nel campo di battaglia, STAPpa la creatura incantata.  ; Prendi il controllo della creatura incantata.  ; Quando la creatura incantata viene messa in un cimitero, rimetti quella carta sul campo di battaglia sotto il controllo del suo proprietario.</TR></TD></TABLE> 
+            <li type=disc>Può essere lanciata bersagliando una creatura già STAPpata. <EM>[D'Angelo 1997/12/29]</EM> </ul><p>
+            */
+            
+            NSUInteger totalSize = [myText length];
+            NSUInteger cur = 0;
+            
+            NSRange r, r2, r3;
+            r = [myText rangeOfString:@"<B><A NAME=\""];
+            cur = r.location + r.length;
+            
+            NSManagedObjectContext *context = [self managedObjectContext];
+            //Card *card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
+            
+            while ( cur < totalSize )
+            {
+                NSString *name, *colour, *type, *cost, *exp;
+                /*r.location = cur;
+                r.length = totalSize - cur;
+                r = [myText rangeOfString:@"\">" options:0 range:r];
+                
+                r2.location = r.location + r.length;
+                r2 = [myText rangeOfString:@"</A>" options:0 range:r2];
+                
+                r3.location = r.location + r.length;
+                r3.length = r2.location - r3.location;*/
+                
+                /*r.location = cur;
+                r.length = totalSize - cur;
+                r = [myText rangeOfString:@"\">" options:0 range:r];
+                cur = r.location + r.length;*/
+                
+                name = [self findInString:myText withStart:@"\">" andEnd:@"</A>" startFrom:&cur];
+                NSLog(@"name : %@", name);
+                
+                colour = [self findInString:myText withStart:@"<TR><TD> Colore= " andEnd:@" </TD>" startFrom:&cur];
+                NSLog(@"colour : %@", colour);
+                
+                type = [self findInString:myText withStart:@"<TD>Tipo= " andEnd:@" </TD>" startFrom:&cur];
+                NSLog(@"type : %@", type);
+                
+                cost = [self findInString:myText withStart:@"<TD>Costo= " andEnd:@"</TD>" startFrom:&cur];
+                NSLog(@"cost : %@", cost);
+                
+                // <TD ALIGN=RIGHT>OR(NC)/5E(NC)</TD></TR>
+                exp = [self findInString:myText withStart:@"<TD ALIGN=RIGHT>" andEnd:@"</TD></TR>" startFrom:&cur];
+                NSLog(@"exp : %@", exp);
+                
+                NSArray *arr = [exp componentsSeparatedByString:@"/"];
+                NSMutableArray *arrSplit = [NSMutableArray array];
+                
+                for (NSString *s in arr) {
+                    r2 = [s rangeOfString:@"("];
+                    s = [s substringToIndex:r2.location];
+                    [arrSplit addObject:s];
+                    //NSLog(@"exp (cut) : %@", s);
+                }
+                
+                NSMutableSet* existingNames = [NSMutableSet set];
+                NSMutableArray* filteredArray = [NSMutableArray array];
+                for (NSString *object in arrSplit) {
+                    if (![existingNames containsObject:object]) {
+                        [existingNames addObject:object];
+                        [filteredArray addObject:object];
+                    }
+                }
+                
+                NSLog(@"Filtered array : %@", filteredArray);
+                
+                //cur = totalSize;
+                
+                r.location = cur;
+                r.length = totalSize - cur;
+                
+                r = [myText rangeOfString:@"<B><A NAME=\"" options:0 range:r];
+                cur = r.location + r.length;
+                NSLog(@"\n");
+            }
+        }
+    }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
