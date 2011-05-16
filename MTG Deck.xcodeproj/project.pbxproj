@@ -17,9 +17,13 @@
 		81036BAA1381333200B9913A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81036BA81381333200B9913A /* MainWindow.xib */; };
 		81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */; };
 		81036BB4138140D700B9913A /* database.html in Resources */ = {isa = PBXBuildFile; fileRef = 81036BB3138140D700B9913A /* database.html */; };
-		81036BB7138141FE00B9913A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BB6138141FE00B9913A /* Card.m */; };
-		81036BBB1381421700B9913A /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BBA1381421700B9913A /* Expansion.m */; };
 		81036BBD138150FB00B9913A /* rule-cards-english.zip in Resources */ = {isa = PBXBuildFile; fileRef = 81036BBC138150FB00B9913A /* rule-cards-english.zip */; };
+		8153DE2913814A28005AECBD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2813814A28005AECBD /* CoreDataManager.m */; };
+		8153DE2D13814A38005AECBD /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */; };
+		8153DE3013814A4D005AECBD /* ViewGameSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE2F13814A4D005AECBD /* ViewGameSingle.m */; };
+		8153DE3C138159A0005AECBD /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE3B138159A0005AECBD /* Card.m */; };
+		8153DE3F138159B4005AECBD /* CardExpansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE3E138159B4005AECBD /* CardExpansion.m */; };
+		8153DE42138159C9005AECBD /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8153DE41138159C9005AECBD /* Expansion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +41,19 @@
 		81036BA91381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTG_Deck.xcdatamodel; sourceTree = "<group>"; };
 		81036BB3138140D700B9913A /* database.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = database.html; sourceTree = "<group>"; };
-		81036BB5138141FE00B9913A /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		81036BB6138141FE00B9913A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		81036BB91381421700B9913A /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
-		81036BBA1381421700B9913A /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
 		81036BBC138150FB00B9913A /* rule-cards-english.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "rule-cards-english.zip"; sourceTree = "<group>"; };
+		8153DE2713814A28005AECBD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		8153DE2813814A28005AECBD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		8153DE2B13814A38005AECBD /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		8153DE2E13814A4D005AECBD /* ViewGameSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGameSingle.h; sourceTree = "<group>"; };
+		8153DE2F13814A4D005AECBD /* ViewGameSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGameSingle.m; sourceTree = "<group>"; };
+		8153DE3A138159A0005AECBD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		8153DE3B138159A0005AECBD /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		8153DE3D138159B4005AECBD /* CardExpansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpansion.h; sourceTree = "<group>"; };
+		8153DE3E138159B4005AECBD /* CardExpansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpansion.m; sourceTree = "<group>"; };
+		8153DE40138159C8005AECBD /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
+		8153DE41138159C9005AECBD /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,8 @@
 				81036BB81381420500B9913A /* CoreData Object */,
 				81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */,
 				81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */,
+				8153DE2E13814A4D005AECBD /* ViewGameSingle.h */,
+				8153DE2F13814A4D005AECBD /* ViewGameSingle.m */,
 				81036BA81381333200B9913A /* MainWindow.xib */,
 				81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */,
 				81036B9D1381333200B9913A /* Supporting Files */,
@@ -116,10 +130,16 @@
 		81036BB81381420500B9913A /* CoreData Object */ = {
 			isa = PBXGroup;
 			children = (
-				81036BB5138141FE00B9913A /* Card.h */,
-				81036BB6138141FE00B9913A /* Card.m */,
-				81036BB91381421700B9913A /* Expansion.h */,
-				81036BBA1381421700B9913A /* Expansion.m */,
+				8153DE3A138159A0005AECBD /* Card.h */,
+				8153DE3B138159A0005AECBD /* Card.m */,
+				8153DE3D138159B4005AECBD /* CardExpansion.h */,
+				8153DE3E138159B4005AECBD /* CardExpansion.m */,
+				8153DE40138159C8005AECBD /* Expansion.h */,
+				8153DE41138159C9005AECBD /* Expansion.m */,
+				8153DE2B13814A38005AECBD /* CoreDataTableViewController.h */,
+				8153DE2C13814A38005AECBD /* CoreDataTableViewController.m */,
+				8153DE2713814A28005AECBD /* CoreDataManager.h */,
+				8153DE2813814A28005AECBD /* CoreDataManager.m */,
 			);
 			name = "CoreData Object";
 			sourceTree = "<group>";
@@ -188,8 +208,12 @@
 				81036BA41381333200B9913A /* main.m in Sources */,
 				81036BA71381333200B9913A /* MTG_DeckAppDelegate.m in Sources */,
 				81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */,
-				81036BB7138141FE00B9913A /* Card.m in Sources */,
-				81036BBB1381421700B9913A /* Expansion.m in Sources */,
+				8153DE2913814A28005AECBD /* CoreDataManager.m in Sources */,
+				8153DE2D13814A38005AECBD /* CoreDataTableViewController.m in Sources */,
+				8153DE3013814A4D005AECBD /* ViewGameSingle.m in Sources */,
+				8153DE3C138159A0005AECBD /* Card.m in Sources */,
+				8153DE3F138159B4005AECBD /* CardExpansion.m in Sources */,
+				8153DE42138159C9005AECBD /* Expansion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +318,7 @@
 				81036BB21381333200B9913A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

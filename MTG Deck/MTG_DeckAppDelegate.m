@@ -65,16 +65,19 @@
             NSUInteger totalSize = [myText length];
             NSUInteger cur = 0;
             
-            NSRange r, r2, r3;
+            NSRange r, r2;
             r = [myText rangeOfString:@"<B><A NAME=\""];
             cur = r.location + r.length;
             
             NSManagedObjectContext *context = [self managedObjectContext];
-            //Card *card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
+            Card *card;// = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
+            Expansion *expansion;
             
             while ( cur < totalSize )
             {
-                NSString *name, *colour, *type, *cost, *exp;
+                //NSString *name, *colour, *type, *cost, *exp;
+                NSString *exp;
+                card = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
                 /*r.location = cur;
                 r.length = totalSize - cur;
                 r = [myText rangeOfString:@"\">" options:0 range:r];
@@ -90,21 +93,21 @@
                 r = [myText rangeOfString:@"\">" options:0 range:r];
                 cur = r.location + r.length;*/
                 
-                name = [self findInString:myText withStart:@"\">" andEnd:@"</A>" startFrom:&cur];
-                NSLog(@"name : %@", name);
+                card.name = [self findInString:myText withStart:@"\">" andEnd:@"</A>" startFrom:&cur];
+                //NSLog(@"name : %@", name);
                 
-                colour = [self findInString:myText withStart:@"<TR><TD> Colore= " andEnd:@" </TD>" startFrom:&cur];
-                NSLog(@"colour : %@", colour);
+                card.colour = [self findInString:myText withStart:@"<TR><TD> Colore= " andEnd:@" </TD>" startFrom:&cur];
+                //NSLog(@"colour : %@", colour);
                 
-                type = [self findInString:myText withStart:@"<TD>Tipo= " andEnd:@" </TD>" startFrom:&cur];
-                NSLog(@"type : %@", type);
+                card.type = [self findInString:myText withStart:@"<TD>Tipo= " andEnd:@" </TD>" startFrom:&cur];
+                //NSLog(@"type : %@", type);
                 
-                cost = [self findInString:myText withStart:@"<TD>Costo= " andEnd:@"</TD>" startFrom:&cur];
-                NSLog(@"cost : %@", cost);
+                card.cost = [self findInString:myText withStart:@"<TD>Costo= " andEnd:@"</TD>" startFrom:&cur];
+                //NSLog(@"cost : %@", cost);
                 
                 // <TD ALIGN=RIGHT>OR(NC)/5E(NC)</TD></TR>
                 exp = [self findInString:myText withStart:@"<TD ALIGN=RIGHT>" andEnd:@"</TD></TR>" startFrom:&cur];
-                NSLog(@"exp : %@", exp);
+                //NSLog(@"exp : %@", exp);
                 
                 NSArray *arr = [exp componentsSeparatedByString:@"/"];
                 NSMutableArray *arrSplit = [NSMutableArray array];
@@ -113,7 +116,6 @@
                     r2 = [s rangeOfString:@"("];
                     s = [s substringToIndex:r2.location];
                     [arrSplit addObject:s];
-                    //NSLog(@"exp (cut) : %@", s);
                 }
                 
                 NSMutableSet* existingNames = [NSMutableSet set];
@@ -125,8 +127,9 @@
                     }
                 }
                 
-                NSLog(@"Filtered array : %@", filteredArray);
                 
+                
+                //NSLog(@"Filtered array : %@", filteredArray);
                 //cur = totalSize;
                 
                 r.location = cur;
@@ -134,7 +137,7 @@
                 
                 r = [myText rangeOfString:@"<B><A NAME=\"" options:0 range:r];
                 cur = r.location + r.length;
-                NSLog(@"\n");
+                //NSLog(@"\n");
             }
         }
     }

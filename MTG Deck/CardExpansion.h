@@ -1,5 +1,5 @@
 //
-//  Expansion.h
+//  CardExpansion.h
 //  MTG Deck
 //
 //  Created by Luca Bertani on 16/05/11.
@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class CardExpansion;
+@class Card, Expansion;
 
-@interface Expansion : NSManagedObject {
+@interface CardExpansion : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * expid;
-@property (nonatomic, retain) NSSet* cards;
+@property (nonatomic, retain) Card * Card;
+@property (nonatomic, retain) Expansion * Expansion;
 
 @end
