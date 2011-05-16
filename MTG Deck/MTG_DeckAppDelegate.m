@@ -19,10 +19,16 @@
 
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
 
+- (void)loadDatabase
+{
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
+    [self loadDatabase];
     return YES;
 }
 

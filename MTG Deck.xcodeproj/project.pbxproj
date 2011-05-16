@@ -16,6 +16,9 @@
 		81036BA71381333200B9913A /* MTG_DeckAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */; };
 		81036BAA1381333200B9913A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81036BA81381333200B9913A /* MainWindow.xib */; };
 		81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81036BAB1381333200B9913A /* MTG_Deck.xcdatamodeld */; };
+		81036BB4138140D700B9913A /* database.html in Resources */ = {isa = PBXBuildFile; fileRef = 81036BB3138140D700B9913A /* database.html */; };
+		81036BB7138141FE00B9913A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BB6138141FE00B9913A /* Card.m */; };
+		81036BBB1381421700B9913A /* Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 81036BBA1381421700B9913A /* Expansion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +27,19 @@
 		81036B961381333200B9913A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81036B981381333200B9913A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		81036B9A1381333200B9913A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		81036B9E1381333200B9913A /* MTG Deck-Info.plist */ = {isa = PBXFileReference; path = "MTG Deck-Info.plist"; sourceTree = "<group>"; };
+		81036B9E1381333200B9913A /* MTG Deck-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTG Deck-Info.plist"; sourceTree = "<group>"; };
 		81036BA01381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		81036BA21381333200B9913A /* MTG Deck-Prefix.pch */ = {isa = PBXFileReference; path = "MTG Deck-Prefix.pch"; sourceTree = "<group>"; };
+		81036BA21381333200B9913A /* MTG Deck-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTG Deck-Prefix.pch"; sourceTree = "<group>"; };
 		81036BA31381333200B9913A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */ = {isa = PBXFileReference; path = MTG_DeckAppDelegate.h; sourceTree = "<group>"; };
+		81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTG_DeckAppDelegate.h; sourceTree = "<group>"; };
 		81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTG_DeckAppDelegate.m; sourceTree = "<group>"; };
 		81036BA91381333200B9913A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		81036BAC1381333200B9913A /* MTG_Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTG_Deck.xcdatamodel; sourceTree = "<group>"; };
+		81036BB3138140D700B9913A /* database.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = database.html; sourceTree = "<group>"; };
+		81036BB5138141FE00B9913A /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		81036BB6138141FE00B9913A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		81036BB91381421700B9913A /* Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expansion.h; sourceTree = "<group>"; };
+		81036BBA1381421700B9913A /* Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expansion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		81036B9C1381333200B9913A /* MTG Deck */ = {
 			isa = PBXGroup;
 			children = (
+				81036BB81381420500B9913A /* CoreData Object */,
 				81036BA51381333200B9913A /* MTG_DeckAppDelegate.h */,
 				81036BA61381333200B9913A /* MTG_DeckAppDelegate.m */,
 				81036BA81381333200B9913A /* MainWindow.xib */,
@@ -92,12 +101,24 @@
 		81036B9D1381333200B9913A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81036BB3138140D700B9913A /* database.html */,
 				81036B9E1381333200B9913A /* MTG Deck-Info.plist */,
 				81036B9F1381333200B9913A /* InfoPlist.strings */,
 				81036BA21381333200B9913A /* MTG Deck-Prefix.pch */,
 				81036BA31381333200B9913A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81036BB81381420500B9913A /* CoreData Object */ = {
+			isa = PBXGroup;
+			children = (
+				81036BB5138141FE00B9913A /* Card.h */,
+				81036BB6138141FE00B9913A /* Card.m */,
+				81036BB91381421700B9913A /* Expansion.h */,
+				81036BBA1381421700B9913A /* Expansion.m */,
+			);
+			name = "CoreData Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +170,7 @@
 			files = (
 				81036BA11381333200B9913A /* InfoPlist.strings in Resources */,
 				81036BAA1381333200B9913A /* MainWindow.xib in Resources */,
+				81036BB4138140D700B9913A /* database.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +184,8 @@
 				81036BA41381333200B9913A /* main.m in Sources */,
 				81036BA71381333200B9913A /* MTG_DeckAppDelegate.m in Sources */,
 				81036BAD1381333200B9913A /* MTG_Deck.xcdatamodeld in Sources */,
+				81036BB7138141FE00B9913A /* Card.m in Sources */,
+				81036BBB1381421700B9913A /* Expansion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
